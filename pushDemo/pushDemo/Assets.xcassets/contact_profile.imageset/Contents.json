@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "contact_profile.pdf",
+      "resizing" : {
+        "mode" : "3-part-vertical",
+        "center" : {
+          "mode" : "tile",
+          "height" : 1
+        },
+        "cap-insets" : {
+          "top" : 233,
+          "bottom" : 233
+        }
+      }
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
