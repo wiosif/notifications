@@ -31,8 +31,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     
     
     func didReceive(_ notification: UNNotification) {
-      //  self.label?.text = notification.request.content.body
-        
+      self.nameLabel.text = "\(notification.request.content.userInfo["first_name"] as! String?)\(notification.request.content.userInfo["last_name"] as! String?)"
     }
 
 }

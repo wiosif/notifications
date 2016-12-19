@@ -48,11 +48,11 @@
                                 </variation>
                             </imageView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-u5-Y7n" userLabel="leftPadding">
-                                <rect key="frame" x="0.0" y="-97" width="0.0" height="526"/>
+                                <rect key="frame" x="0.0" y="-97" width="0.0" height="467"/>
                                 <color key="backgroundColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fif-Dp-Hb9" userLabel="rightPadding">
-                                <rect key="frame" x="320" y="-97" width="0.0" height="526"/>
+                                <rect key="frame" x="320" y="-97" width="0.0" height="467"/>
                                 <color key="backgroundColor" red="0.95686274770000002" green="0.95686274770000002" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Natasha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8vT-dg-SOd">
@@ -214,7 +214,7 @@
                             <constraint firstAttribute="trailing" secondItem="8qn-8z-JYd" secondAttribute="trailing" id="Pn7-XI-0b8"/>
                             <constraint firstAttribute="trailing" secondItem="8vT-dg-SOd" secondAttribute="trailing" constant="23" id="TOJ-Q7-kQ8"/>
                             <constraint firstItem="bHR-6C-0Bj" firstAttribute="leading" secondItem="Bci-u5-Y7n" secondAttribute="trailing" id="ZmM-BY-W3h"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Bci-u5-Y7n" secondAttribute="bottom" constant="-59" id="dFk-iZ-Efz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Bci-u5-Y7n" secondAttribute="bottom" id="dFk-iZ-Efz"/>
                             <constraint firstItem="V0O-nQ-c9h" firstAttribute="leading" secondItem="rXx-gl-nVZ" secondAttribute="leading" id="dWa-tS-GGZ"/>
                             <constraint firstAttribute="bottom" secondItem="bHR-6C-0Bj" secondAttribute="bottom" constant="51" id="gea-KX-QfS">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.59999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="137.59999999999999" y="138.53073463268368"/>
         </scene>
     </scenes>
     <resources>
