@@ -12,17 +12,26 @@ import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet var label: UILabel?
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var thirdLabel: UILabel!
+    
+    @IBOutlet weak var unassignButton: UIButton!
+    @IBOutlet weak var contactRelationField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any required interface initialization here.
+        
     }
     
+    @IBAction func unassignButtonAction(_ sender: Any) {
+    }
+    
+    
     func didReceive(_ notification: UNNotification) {
-      //  self.label?.text = notification.request.content.body
-        
+      self.nameLabel.text = "\(notification.request.content.userInfo["first_name"] as! String?)\(notification.request.content.userInfo["last_name"] as! String?)"
     }
 
 }
