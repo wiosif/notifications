@@ -22,7 +22,7 @@ class NotificationService: UNNotificationServiceExtension {
         self.bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
         guard let bestAttemptContent = self.bestAttemptContent,
-            let notificationData = request.content.userInfo["aps"] as? JSONDictionary
+            let notificationData = request.content.userInfo as? JSONDictionary
             else {
                 self.contentHandler?(request.content)
                 return
