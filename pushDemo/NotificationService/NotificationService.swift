@@ -22,23 +22,25 @@ class NotificationService: UNNotificationServiceExtension {
         self.bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
         guard let bestAttemptContent = self.bestAttemptContent,
-            let notificationData = request.content.userInfo["aps"] as? JSONDictionary,
-            let profilePic = notificationData["profile_pic"] as? String,
-            let profilePicURL = URL(string: profilePic)
+            let notificationData = request.content.userInfo["aps"] as? JSONDictionary
             else {
                 self.contentHandler?(request.content)
                 return
         }
         
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        session.downloadTask(with: profilePicURL) { (url, _, _) in
-            if let url = url {
-                let attachment = try! UNNotificationAttachment(identifier: "profile_pic",
-                                                               url: url,
-                                                               options: [UNNotificationAttachmentOptionsTypeHintKey: kUTTypePNG])
-                bestAttemptContent.attachments = [attachment]
+        if let profilePic = notificationData["profile_pic"] as? String, let profilePicURL = URL(string: profilePic) {
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            session.downloadTask(with: profilePicURL) { (url, _, _) in
+                if let url = url {
+                    let attachment = try! UNNotificationAttachment(identifier: "profile_pic",
+                                                                   url: url,
+                                                                   options: [UNNotificationAttachmentOptionsTypeHintKey: kUTTypePNG])
+                    bestAttemptContent.attachments = [attachment]
+                }
+                self.contentHandler?(bestAttemptContent)
             }
-            self.contentHandler?(bestAttemptContent)
+        } else {
+            self.contentHandler?(request.content)
         }
     }
     
